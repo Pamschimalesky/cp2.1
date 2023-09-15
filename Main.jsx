@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, navigate } from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
 import Produtos from './routes/Produtos/Index.jsx'
 import EditarProdutos from './routes/EditarProdutos/Index.jsx'
 import Error from './routes/Error/Index.jsx'
+import { element } from 'prop-types'
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
           // endereco certo porem nao existe mais (nao esta habilitado)
           path: '/antiga',
           element: <Navigate to='/Home'/>
+        },
+        {
+          path: "/antiga",
+          element: <navigate to="/"/>
         }
       ] 
     }
